@@ -1,0 +1,115 @@
+{
+  "exclusive": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "left",
+  "spacing": 8,
+  "modules-left": [
+    "custom/rofi",
+    "group/utility",
+    "niri/workspaces",
+    "tray"
+  ],
+  "modules-right": [
+    "custom/updates",
+    "disk",
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "custom/wttr",
+    "clock",
+    "custom/logout"
+  ],
+  "group/utility": {
+		"orientation": "vertical",
+		"modules": [
+			"custom/screenshot",
+			"custom/lock",
+      "custom/terminal",
+      "custom/browser",
+      "custom/file-manager"
+		]
+	},
+  "custom/rofi": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "fuzzel"
+  },
+  "custom/screenshot": {
+    "format": "",
+    "tooltip-format": "take screenshot",
+    "on-click": "grim"
+  },
+  "custom/lock": {
+    "format": "",
+    "tooltip-format": "lock screen",
+    "on-click": "swaylock"
+  },
+  "custom/terminal": {
+    "format": "",
+    "on-click": "kitty"
+  },
+  "custom/browser": {
+    "format": "",
+    "on-click": "firefox"
+  },
+  "custom/file-manager": {
+    "format": "",
+    "on-click": "pcmanfm"
+  },
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+		  "default": ""
+    }
+  },
+  "tray": {
+    "icon-size": 24,
+    "spacing": 8
+  },
+  "custom/updates": {
+    "format": "",
+    "tooltip-format": "{} updates",
+    "exec": "checkupdates | wc -l"
+  },
+  "disk": {
+    "format": ""
+  },
+  "cpu": {
+	  "format": ""
+  },
+  "memory": {
+    "format": ""
+  },
+  "network": {
+    "format-wifi": "",
+    "tooltip-format": "{essid}",
+    "format-disconnected": ""
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "",
+    "format-muted": "",
+    "tooltip-format": "{volume}",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+  "custom/wttr": {
+    "format": "",
+    "tooltip-format": "{}",
+    "interval": 300,
+    "exec": "curl wttr.in/Dhaka?format=%C+%t"
+  },
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%A\n%d %B, %Y}",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "custom/logout": {
+    "format": "",
+    "tooltip-format": "logout"
+  }
+}

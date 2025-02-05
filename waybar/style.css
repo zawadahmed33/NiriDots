@@ -1,0 +1,90 @@
+@define-color color0 #1f1f28;
+@define-color color1 #c8c3a6;
+@define-color color2 #2a2a37;
+@define-color color3 #d8616b;
+@define-color color4 #98bb6c;
+@define-color color5 #dca561;
+@define-color color6 #7e9cd8;
+@define-color color7 #9c86bf;
+@define-color color8 #7fb4ca;
+
+* {
+  all: initial;
+  font-family: "JetBrains Mono";
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: @color0;
+}
+
+tooltip {
+  border: 2px solid @color2;
+  background: @color0;
+  color: @color1;
+}
+
+#custom-rofi,
+#utility,
+#workspaces,
+#custom-updates,
+#disk,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-wttr,
+#clock,
+#custom-logout {
+  margin: 0px 8px 0px 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: @color2;
+}
+
+#custom-rofi {
+  margin-top: 8px;
+  background-image: linear-gradient(45deg, @color4, @color6);
+  color: @color0;
+}
+
+#custom-screenshot,
+#custom-lock,
+#custom-terminal,
+#custom-browser,
+#custom-file-manager {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: @color1;
+}
+
+#workspaces button label {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: @color4;
+}
+
+#workspaces button.focused label {
+  color: @color5;
+}
+
+#custom-updates,
+#cpu,
+#network,
+#custom-wttr {
+  color: @color7;
+}
+
+#disk,
+#memory,
+#pulseaudio,
+#clock {
+  color: @color8;
+}
+
+#custom-logout {
+  margin-bottom: 8px;
+  background-image: linear-gradient(45deg, @color5, @color3);
+  color: @color0;
+}
