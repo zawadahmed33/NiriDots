@@ -26,10 +26,7 @@
 		"orientation": "vertical",
 		"modules": [
 			"custom/screenshot",
-			"custom/lock",
-      "custom/terminal",
-      "custom/browser",
-      "custom/file-manager"
+			"custom/lock"
 		]
 	},
   "custom/rofi": {
